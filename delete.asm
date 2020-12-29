@@ -19,8 +19,8 @@ HEADER
 
 WHILE
 
-    LDR R6, R3, #0 ; While mem[current address] != x0000
-    BRz DONE
+ ;   LDR R6, R3, #0 ; While mem[current address] != x0000
+  ;  BRz DONE
     LD R5, STUDID
     LDR R5, R5, #0 ; Read Student ID
 
@@ -47,10 +47,10 @@ COMPRSCORES
 THEN
         ; When a match is found, the current node is skipped in the
         ; linked list, effectively deleting it  
-    LDR R2, R0, #0 ; temp = contents of previous address
+     LDR R2, R0, #0 ; temp = contents of previous address
    
-    LDR R5, R4, #0 ; 
-    STR R6, R0, #0 ; mem[current address]=mem[next address]
+    LDR R6, R3, #0 ; 
+    STR R6, R0, #0 ; mem[previous address]=mem[next address]
 
     BR DONE 
    
@@ -100,5 +100,13 @@ STUDSCR .FILL x4001
 	.FILL x2010
 .END
 
+; Node to be deleted
 
+.ORIG x4000
+.FILL x6476
+.END
+
+.ORIG x4001
+.FILL #99
+.END
 
