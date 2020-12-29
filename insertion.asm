@@ -18,8 +18,6 @@ HEADER
 
 WHILE
 
- ;   LDR R6, R3, #0 ; While mem[current address] != x0000
-  ;  BRz DONE
     LD R5, INSRTID
     LDR R5, R5, #0 ; Read Student ID
 
