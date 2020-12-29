@@ -12,4 +12,4 @@ Instructions to download the LC3 simulator can be found on [Professor Yale Patt'
 
 With LC3tools, convert all files to .obj by assembling to run
 
-sort.asm is an assembly implementation of the bubble sorting algorithm. The program sorts an array of 16 2's complement integers that starts at x32F0 in memory and ends at x32FF in memory. It does not matter if the integers are positive, negative, or zero.
+sortll.asm is an assembly implementation of the bubble sorting algorithm. The program sorts a linked list of exam scores with the first node at x3200 in memory and terminated by a null value (x0000). The program works on any linked list starting at x3200 with the exam scores being greater than or equal to 0.
